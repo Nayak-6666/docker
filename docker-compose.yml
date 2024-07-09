@@ -9,9 +9,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: nayak
-      MYSQL_USER: nayak
-      MYSQL_PASSWORD: nayak123
+      MYSQL_DATABASE: saikrishna
+      MYSQL_USER: saikrishna
+      MYSQL_PASSWORD: krishna123
 
   wordpress:
     image: wordpress:latest
@@ -19,13 +19,13 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:80"
+      - "8080:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: nayak
-      WORDPRESS_DB_PASSWORD: nayak123
-      WORDPRESS_DB_NAME: nayak
+      WORDPRESS_DB_USER: saikrishna
+      WORDPRESS_DB_PASSWORD: krishna123
+      WORDPRESS_DB_NAME: saikrishna
     volumes:
       - wordpress_data:/var/www/html
 
